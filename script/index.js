@@ -508,3 +508,4 @@ document.addEventListener("DOMContentLoaded", () =>{
   initTabSystem()
   initFlipButtons()
 })
+

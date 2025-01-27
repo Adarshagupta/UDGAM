@@ -31,6 +31,17 @@
 
     <!-- Flip Animation Script -->
     <script src="script/index.js"></script>
+    <link
+    href="https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/css/epoch-webflow-template.webflow.bedbac1bb.css"
+    rel="stylesheet" type="text/css" />
+<script
+    type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
+<link href="https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675c0b93091590353e9f6661_Favicon-Fenix.png"
+    rel="shortcut icon" type="image/x-icon" />
+<link href="https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675c0b99daaec8bf4cfdc6f0_Webclip-Fenix.png"
+    rel="apple-touch-icon" />
+<script
+    type="text/javascript">window.__WEBFLOW_CURRENCY_SETTINGS = { "currencyCode": "USD", "symbol": "$", "decimal": ".", "fractionDigits": 2, "group": ",", "template": "{{wf {\"path\":\"symbol\",\"type\":\"PlainText\"} }} {{wf {\"path\":\"amount\",\"type\":\"CommercePrice\"} }} {{wf {\"path\":\"currencyCode\",\"type\":\"PlainText\"} }}", "hideDecimalForWholeNumbers": false };</script>
 
     <!-- Add countdown script -->
     <script>
@@ -38,25 +49,25 @@
         const targetDate = new Date('2025-02-28T00:00:00').getTime();
 
         // Update the countdown every second
-        const countdown = setInterval(function() {
+        const countdown = setInterval(function () {
             // Get current date and time
             const now = new Date().getTime();
-            
+
             // Calculate the remaining time
             const distance = targetDate - now;
-            
+
             // Calculate days, hours, minutes and seconds
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
+
             // Update the HTML elements
             document.getElementById('days').innerHTML = days.toString().padStart(2, '0');
             document.getElementById('hours').innerHTML = hours.toString().padStart(2, '0');
             document.getElementById('minutes').innerHTML = minutes.toString().padStart(2, '0');
             document.getElementById('seconds').innerHTML = seconds.toString().padStart(2, '0');
-            
+
             // If the countdown is finished, display a message
             if (distance < 0) {
                 clearInterval(countdown);
@@ -124,24 +135,29 @@
                             display: flex;
                             align-items: center;
                         }
+
                         .nav-menu-link-holder {
                             display: flex;
                             gap: 2rem;
                         }
+
                         .nav-links {
                             display: flex;
                             flex-direction: column;
                             align-items: center;
                         }
+
                         .nav-link {
                             color: white;
                             text-decoration: none;
                             font-size: 1rem;
                             transition: color 0.3s ease;
                         }
+
                         .nav-link:hover {
                             color: #ff0000;
                         }
+
                         .number {
                             font-size: 0.8rem;
                             color: rgba(255, 255, 255, 0.5);
@@ -154,6 +170,9 @@
             </div>
         </div>
     </div>
+
+<!-----------Hero----------------------------->
+<section id="Hero">
     <div class="section">
         <div data-w-id="b01bca43-8538-1939-ee50-6086d5eaf403" class="hero-section-holder">
             <div class="hero-section-wrapper">
@@ -213,14 +232,86 @@
                     <source src="https://kapkap-common.stariidata.com/web_video/679020b641796521bLt4GZps42590.mp4"
                         type="video/mp4">
                 </video>
+                <button onclick="toggleMute()" style="position: absolute; bottom: 20px; right: 20px; z-index: 1000; padding: 10px; border-radius: 5px; background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer;">
+                    <i class="fas fa-volume-mute"></i> Unmute
+                </button>
             </div>
         </div>
     </div>
     </div>
+</section>
+<!-----------------------------------------Hero------------------------->
+<section class="section">
+    <div class="w-layout-blockcontainer container-full w-container">
+        <div class="about-title slide-up-from-bottom-animation">
+            <div class="w-layout-hflex subheading">
+                <div class="circle-border">
+                    <div class="circle"></div>
+                </div>
+                <h6>ABOUT UDGAM
+                </h6>
+            </div>
+            <div class="space-text"></div>
+            <h2>EMBRACE THE SPIRIT            </h2>
+            <div class="space-text"></div>
+            <p class="max-width-30vw">Welcome to Udgam 2024, where passion meets play. A 4-day explosion of sports, culture, and unbridled enthusiasm! With 30,000+ students from 650+ colleges, we create a whirlwind of events from dramatic face-offs to epic showdowns.
+            </p>
+            <div class="space-small"></div><a href="/features" data-w-id="34a723e7-6853-d46d-e857-9ec075fdd6b1"
+                class="button-with-circle-icon w-inline-block">
+                <div class="button-arrow-wrapper"><img width="Auto" height="Auto" alt=""
+                        src="https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675aea0b3207dd793e9b0d0b_navigation.svg"
+                        loading="eager" class="arrow" /></div>
+                <div>Learn More</div>
+            </a>
+        </div>
+        <div class="space-mid"></div>
+        <div class="flex-image-wrapper">
+            <div class="image-flex-wrapper">
+                <div id="w-node-_42ffd20f-0e41-5372-dcae-287df16cffbe-3e9b0bd0" class="left-flex"><img
+                        sizes="(max-width: 479px) 20vw, (max-width: 767px) 40vw, (max-width: 991px) 320px, 36vw"
+                        srcset="https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675b06cf3caf3a6bee1e4d71_67441bfcaa600a88ab3ec514_img_QGp9-p-500.webp 500w, https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675b06cf3caf3a6bee1e4d71_67441bfcaa600a88ab3ec514_img_QGp9-p-800.webp 800w, https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675b06cf3caf3a6bee1e4d71_67441bfcaa600a88ab3ec514_img_QGp9.webp 1080w"
+                        alt="gadget"
+                        src="https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675b06cf3caf3a6bee1e4d71_67441bfcaa600a88ab3ec514_img_QGp9.webp"
+                        loading="eager" class="features-image-mid" />
+                    <div id="w-node-_42ffd20f-0e41-5372-dcae-287df16cffc0-3e9b0bd0" class="image-block"><img
+                            loading="eager"
+                            src="https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675b06d0e8372b292c25b8fb_67441bfcaa600a88ab3ec572_earphone.webp"
+                            alt="gadget" class="features-image-small" /><img
+                            sizes="(max-width: 479px) 20vw, (max-width: 767px) 24vw, (max-width: 991px) 192px, 22vw"
+                            srcset="https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675be9e947fe946816c38666_img_0GuT-p-500.webp 500w, https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675be9e947fe946816c38666_img_0GuT-p-800.webp 800w, https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675be9e947fe946816c38666_img_0GuT-p-1080.webp 1080w, https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675be9e947fe946816c38666_img_0GuT.webp 1084w"
+                            alt="woman"
+                            src="https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675be9e947fe946816c38666_img_0GuT.webp"
+                            loading="eager" class="features-image-small" /></div>
+                </div>
+                <div class="main-image-wrapper"><img sizes="(max-width: 479px) 35vw, (max-width: 991px) 30vw, 33vw"
+                        srcset="https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675c1989ee94a5c0465d1414_img_pK4u-p-500.webp 500w, https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675c1989ee94a5c0465d1414_img_pK4u-p-800.webp 800w, https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675c1989ee94a5c0465d1414_img_pK4u-p-1080.webp 1080w, https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675c1989ee94a5c0465d1414_img_pK4u-p-1600.webp 1600w, https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675c1989ee94a5c0465d1414_img_pK4u-p-2000.webp 2000w, https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675c1989ee94a5c0465d1414_img_pK4u.webp 2400w"
+                        alt="man with sunglasses"
+                        src="https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675c1989ee94a5c0465d1414_img_pK4u.webp"
+                        loading="eager" class="main-image" /></div>
+                <div id="w-node-_42ffd20f-0e41-5372-dcae-287df16cffc5-3e9b0bd0" class="right-flex">
+                    <div id="w-node-_42ffd20f-0e41-5372-dcae-287df16cffc6-3e9b0bd0" class="image-block"><img
+                            sizes="(max-width: 479px) 20vw, (max-width: 767px) 24vw, (max-width: 991px) 192px, 22vw"
+                            srcset="https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675b06cf067694fa0402887b_67441bfcaa600a88ab3ec50a_img_qjsV-p-500.webp 500w, https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675b06cf067694fa0402887b_67441bfcaa600a88ab3ec50a_img_qjsV-p-800.webp 800w, https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675b06cf067694fa0402887b_67441bfcaa600a88ab3ec50a_img_qjsV-p-1080.webp 1080w, https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675b06cf067694fa0402887b_67441bfcaa600a88ab3ec50a_img_qjsV.webp 1084w"
+                            alt="woman"
+                            src="https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675b06cf067694fa0402887b_67441bfcaa600a88ab3ec50a_img_qjsV.webp"
+                            loading="eager" class="features-image-small" /><img loading="eager"
+                            src="https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675b06cf69eca0bd14c0bb9e_67441bfcaa600a88ab3ec503_img_fxiX.webp"
+                            alt="gadget" class="features-image-small" /></div><img
+                        sizes="(max-width: 479px) 20vw, (max-width: 767px) 40vw, (max-width: 991px) 320px, 36vw"
+                        srcset="https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675b06ed04c4d4d495a03ecd_67441bfcaa600a88ab3ec512_img_xmJ8-p-500.webp 500w, https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675b06ed04c4d4d495a03ecd_67441bfcaa600a88ab3ec512_img_xmJ8.webp 800w"
+                        alt="gadget"
+                        src="https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/675b06ed04c4d4d495a03ecd_67441bfcaa600a88ab3ec512_img_xmJ8.webp"
+                        loading="eager" class="features-image-mid" />
+                </div>
+            </div>
+            <div data-w-id="42ffd20f-0e41-5372-dcae-287df16cffca" class="image-trigger"></div>
+        </div>
+        <div class="space-large"></div>
+    </div>
+</section>
 
-    
     <!-- About Section -->
-    <div class="section about-section" id="About">
+    <!-- <div class="section about-section" id="About">
         <div class="container">
             <div class="about-wrapper">
                 <div class="about-content-left">
@@ -249,17 +340,17 @@
                 </div>
                 <div class="about-content-right">
                     <div class="image-container">
-                        <img src="https://img.freepik.com/free-vector/gradient-national-sports-day-illustration_52683-65676.jpg?t=st=1737660088~exp=1737663688~hmac=deece7baf33727a5dc2dd4c909de532762e98ac716b76c612c453621a53db0bf&w=1480" alt="Udgam Logo"
-                            class="about-image">
+                        <img src="https://img.freepik.com/free-vector/gradient-national-sports-day-illustration_52683-65676.jpg?t=st=1737660088~exp=1737663688~hmac=deece7baf33727a5dc2dd4c909de532762e98ac716b76c612c453621a53db0bf&w=1480"
+                            alt="Udgam Logo" class="about-image">
                         <div class="image-overlay"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- SRM AP Section -->
-    <div class="srm-section">
+    <!-- <div class="srm-section">
         <div class="srm-bg-pattern"></div>
         <div class="srm-container">
             <div class="srm-content">
@@ -303,8 +394,83 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
+    <section class="paralax-gallery">
+        <main>
+            <ul class='slider'>
+                <li class='item'
+                    style="background-image: url('https://cdn.mos.cms.futurecdn.net/dP3N4qnEZ4tCTCLq59iysd.jpg')">
+                    <div class='content'>
+                        <h2 class='title'>"Lossless Youths"</h2>
+                        <p class='description'> Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+                            praesentium nisi. Id laboriosam ipsam enim. </p>
+                        <button>Read More</button>
+                    </div>
+                </li>
+                <li class='item' style="background-image: url('https://i.redd.it/tc0aqpv92pn21.jpg')">
+                    <div class='content'>
+                        <h2 class='title'>"Estrange Bond"</h2>
+                        <p class='description'> Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+                            praesentium nisi. Id laboriosam ipsam enim. </p>
+                        <button>Read More</button>
+                    </div>
+                </li>
+                <li class='item'
+                    style="background-image: url('https://wharferj.files.wordpress.com/2015/11/bio_north.jpg')">
+                    <div class='content'>
+                        <h2 class='title'>"The Gate Keeper"</h2>
+                        <p class='description'> Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+                            praesentium nisi. Id laboriosam ipsam enim. </p>
+                        <button>Read More</button>
+                    </div>
+                </li>
+                <li class='item' style="background-image: url('https://images7.alphacoders.com/878/878663.jpg')">
+                    <div class='content'>
+                        <h2 class='title'>"Last Trace Of Us"</h2>
+                        <p class='description'>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure
+                            corporis inventore praesentium nisi. Id laboriosam ipsam enim.
+                        </p>
+                        <button>Read More</button>
+                    </div>
+                </li>
+                <li class='item'
+                    style="background-image: url('https://theawesomer.com/photos/2017/07/simon_stalenhag_the_electric_state_6.jpg')">
+                    <div class='content'>
+                        <h2 class='title'>"Urban Decay"</h2>
+                        <p class='description'>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure
+                            corporis inventore praesentium nisi. Id laboriosam ipsam enim.
+                        </p>
+                        <button>Read More</button>
+                    </div>
+                </li>
+                <li class='item'
+                    style="background-image: url('https://da.se/app/uploads/2015/09/simon-december1994.jpg')">
+                    <div class='content'>
+                        <h2 class='title'>"The Migration"</h2>
+                        <p class='description'> Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+                            praesentium nisi. Id laboriosam ipsam enim. </p>
+                        <button>Read More</button>
+                    </div>
+                </li>
+            </ul>
+            <nav class='nav'>
+                <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+                <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+            </nav>
+        </main>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    </section>
+    
     <!-- Sports Events Section -->
     <div class="events-section">
         <div class="events-bg-pattern"></div>
@@ -314,82 +480,818 @@
                 <h2 class="events-heading">SPORTS <span class="events-accent">EVENTS</span></h2>
                 <div class="events-subtitle">Experience the thrill of competition across multiple sporting disciplines
                 </div>
+
+                <!-- Tabs Container -->
+                <div class="tabs-container">
+                    <button class="tab-button active" data-tab="external">
+                        <i class="fas fa-globe"></i>
+                        External Sports
+                    </button>
+                    <button class="tab-button" data-tab="internal">
+                        <i class="fas fa-school"></i>
+                        Internal Sports
+                    </button>
+                    <button class="tab-button" data-tab="esports">
+                        <i class="fas fa-gamepad"></i>
+                        E-Sports
+                    </button>
+                </div>
             </div>
-            <div class="events-grid">
-                <div class="event-card">
-                    <div class="event-image-wrap">
-                        <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=800&h=600"
-                            alt="Cricket Tournament" class="event-image">
-                        <div class="event-overlay"></div>
-                    </div>
-                    <div class="event-content">
-                        <div class="event-type">TEAM SPORT</div>
-                        <h3 class="event-title">Cricket Tournament</h3>
-                        <div class="event-details">
-                            <div class="event-stat">
-                                <div class="stat-icon">👥</div>
-                                <div class="stat-text">16 Teams</div>
+
+            <!-- Tab Contents -->
+            <div class="tab-contents">
+                <!-- External Sports Tab -->
+                <div class="tab-content active" id="external-tab">
+                    <div class="events-grid">
+                        <div class="event-card">
+                            <div class="event-image-wrap">
+                                <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=800&h=600"
+                                    alt="Cricket Tournament" class="event-image">
+                                <div class="event-overlay"></div>
                             </div>
-                            <div class="event-stat">
-                                <div class="stat-icon">🏆</div>
-                                <div class="stat-text">₹1L Prize</div>
+                            <div class="event-content">
+                                <div class="event-type">TEAM SPORT</div>
+                                <h3 class="event-title">Cricket Tournament</h3>
+                                <div class="event-details">
+                                    <div class="event-stat">
+                                        <div class="stat-icon">👥</div>
+                                        <div class="stat-text">16 Teams</div>
+                                    </div>
+                                    <div class="event-stat">
+                                        <div class="stat-icon">🏆</div>
+                                        <div class="stat-text">₹1L Prize</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-image-wrap">
+                                <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=800&h=600"
+                                    alt="Football Tournament" class="event-image">
+                                <div class="event-overlay"></div>
+                            </div>
+                            <div class="event-content">
+                                <div class="event-type">TEAM SPORT</div>
+                                <h3 class="event-title">Football League</h3>
+                                <div class="event-details">
+                                    <div class="event-stat">
+                                        <div class="stat-icon">👥</div>
+                                        <div class="stat-text">20 Teams</div>
+                                    </div>
+                                    <div class="event-stat">
+                                        <div class="stat-icon">🏆</div>
+                                        <div class="stat-text">₹75K Prize</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-image-wrap">
+                                <img src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=800&h=600"
+                                    alt="Volleyball Tournament" class="event-image">
+                                <div class="event-overlay"></div>
+                            </div>
+                            <div class="event-content">
+                                <div class="event-type">TEAM SPORT</div>
+                                <h3 class="event-title">Volleyball Cup</h3>
+                                <div class="event-details">
+                                    <div class="event-stat">
+                                        <div class="stat-icon">👥</div>
+                                        <div class="stat-text">12 Teams</div>
+                                    </div>
+                                    <div class="event-stat">
+                                        <div class="stat-icon">🏆</div>
+                                        <div class="stat-text">₹50K Prize</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="event-card">
-                    <div class="event-image-wrap">
-                        <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=800&h=600"
-                            alt="Basketball Championship" class="event-image">
-                        <div class="event-overlay"></div>
-                    </div>
-                    <div class="event-content">
-                        <div class="event-type">INDOOR SPORT</div>
-                        <h3 class="event-title">Basketball Championship</h3>
-                        <div class="event-details">
-                            <div class="event-stat">
-                                <div class="stat-icon">👥</div>
-                                <div class="stat-text">24 Teams</div>
+                <!-- Internal Sports Tab -->
+                <div class="tab-content" id="internal-tab">
+                    <div class="events-grid">
+                        <div class="event-card">
+                            <div class="event-image-wrap">
+                                <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=800&h=600"
+                                    alt="Basketball Tournament" class="event-image">
+                                <div class="event-overlay"></div>
                             </div>
-                            <div class="event-stat">
-                                <div class="stat-icon">🏆</div>
-                                <div class="stat-text">₹50K Prize</div>
+                            <div class="event-content">
+                                <div class="event-type">INDOOR SPORT</div>
+                                <h3 class="event-title">Basketball Championship</h3>
+                                <div class="event-details">
+                                    <div class="event-stat">
+                                        <div class="stat-icon">👥</div>
+                                        <div class="stat-text">24 Teams</div>
+                                    </div>
+                                    <div class="event-stat">
+                                        <div class="stat-icon">🏆</div>
+                                        <div class="stat-text">₹50K Prize</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-image-wrap">
+                                <img src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=800&h=600"
+                                    alt="Table Tennis" class="event-image">
+                                <div class="event-overlay"></div>
+                            </div>
+                            <div class="event-content">
+                                <div class="event-type">INDOOR SPORT</div>
+                                <h3 class="event-title">Table Tennis</h3>
+                                <div class="event-details">
+                                    <div class="event-stat">
+                                        <div class="stat-icon">👥</div>
+                                        <div class="stat-text">32 Players</div>
+                                    </div>
+                                    <div class="event-stat">
+                                        <div class="stat-icon">🏆</div>
+                                        <div class="stat-text">₹20K Prize</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-image-wrap">
+                                <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?auto=format&fit=crop&w=800&h=600"
+                                    alt="Badminton Tournament" class="event-image">
+                                <div class="event-overlay"></div>
+                            </div>
+                            <div class="event-content">
+                                <div class="event-type">INDOOR SPORT</div>
+                                <h3 class="event-title">Badminton</h3>
+                                <div class="event-details">
+                                    <div class="event-stat">
+                                        <div class="stat-icon">👥</div>
+                                        <div class="stat-text">48 Players</div>
+                                    </div>
+                                    <div class="event-stat">
+                                        <div class="stat-icon">🏆</div>
+                                        <div class="stat-text">₹25K Prize</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="event-card">
-                    <div class="event-image-wrap">
-                        <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&h=600"
-                            alt="Football League" class="event-image">
-                        <div class="event-overlay"></div>
-                    </div>
-                    <div class="event-content">
-                        <div class="event-type">FIELD SPORT</div>
-                        <h3 class="event-title">Football League</h3>
-                        <div class="event-details">
-                            <div class="event-stat">
-                                <div class="stat-icon">👥</div>
-                                <div class="stat-text">32 Teams</div>
+                <!-- E-Sports Tab -->
+                <div class="tab-content" id="esports-tab">
+                    <div class="events-grid">
+                        <div class="event-card">
+                            <div class="event-image-wrap">
+                                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&h=600"
+                                    alt="VALORANT Tournament" class="event-image">
+                                <div class="event-overlay"></div>
                             </div>
-                            <div class="event-stat">
-                                <div class="stat-icon">🏆</div>
-                                <div class="stat-text">₹75K Prize</div>
+                            <div class="event-content">
+                                <div class="event-type">E-SPORT</div>
+                                <h3 class="event-title">VALORANT</h3>
+                                <div class="event-details">
+                                    <div class="event-stat">
+                                        <div class="stat-icon">👥</div>
+                                        <div class="stat-text">32 Teams</div>
+                                    </div>
+                                    <div class="event-stat">
+                                        <div class="stat-icon">🏆</div>
+                                        <div class="stat-text">₹25K Prize</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-image-wrap">
+                                <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&h=600"
+                                    alt="FIFA Tournament" class="event-image">
+                                <div class="event-overlay"></div>
+                            </div>
+                            <div class="event-content">
+                                <div class="event-type">E-SPORT</div>
+                                <h3 class="event-title">FIFA 24</h3>
+                                <div class="event-details">
+                                    <div class="event-stat">
+                                        <div class="stat-icon">👥</div>
+                                        <div class="stat-text">64 Players</div>
+                                    </div>
+                                    <div class="event-stat">
+                                        <div class="stat-icon">🏆</div>
+                                        <div class="stat-text">₹15K Prize</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-image-wrap">
+                                <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?auto=format&fit=crop&w=800&h=600"
+                                    alt="BGMI Tournament" class="event-image">
+                                <div class="event-overlay"></div>
+                            </div>
+                            <div class="event-content">
+                                <div class="event-type">E-SPORT</div>
+                                <h3 class="event-title">BGMI</h3>
+                                <div class="event-details">
+                                    <div class="event-stat">
+                                        <div class="stat-icon">👥</div>
+                                        <div class="stat-text">25 Teams</div>
+                                    </div>
+                                    <div class="event-stat">
+                                        <div class="stat-icon">🏆</div>
+                                        <div class="stat-text">₹20K Prize</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="events-cta">
-                <a href="#all-events" class="more-events-btn">
-                    <span class="btn-text">MORE EVENTS</span>
+                <a href="events.html" class="more-events-btn">
+                    <span class="btn-text">VIEW ALL EVENTS</span>
                     <span class="btn-icon">→</span>
                 </a>
             </div>
         </div>
     </div>
+
+    <style>
+        /* Tab Styles */
+        .tabs-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .tab-button {
+            padding: 15px 30px;
+            background: rgba(135, 206, 235, 0.1);
+            border: 2px solid rgba(135, 206, 235, 0.3);
+            border-radius: 50px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tab-button i {
+            font-size: 18px;
+        }
+
+        .tab-button:hover {
+            background: rgba(135, 206, 235, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .tab-button.active {
+            background: #87CEEB;
+            color: #0a0a0a;
+            border-color: #87CEEB;
+        }
+
+        .tab-content {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .event-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(135, 206, 235, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(135, 206, 235, 0.3);
+            box-shadow: 0 20px 40px rgba(135, 206, 235, 0.1);
+        }
+
+        .events-cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .more-events-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            background: #87CEEB;
+            color: #0a0a0a;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .more-events-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(135, 206, 235, 0.2);
+        }
+
+        .btn-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .more-events-btn:hover .btn-icon {
+            transform: translateX(5px);
+        }
+
+        @media screen and (max-width: 768px) {
+            .tabs-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tab-button {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .event-card {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    // Add active class to clicked button and corresponding content
+                    button.classList.add('active');
+                    const tabId = `${button.dataset.tab}-tab`;
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+
+    <!-- Sponsors Section -->
+    <section class="sponsors-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">OUR PARTNERS</div>
+                <h2 class="section-heading">PROUD <span class="accent-text">SPONSORS</span></h2>
+                <p class="section-subtitle">Supported by industry leaders and trusted brands</p>
+            </div>
+            <div class="sponsors-grid">
+                <div class="sponsor-card">
+                    <img src="https://testfiles-udgam-six.vercel.app/img/UDGAM%20(1).png" alt="Sponsor 1"
+                        class="sponsor-logo">
+                    <div class="sponsor-content">
+                        <h3>Title Sponsor</h3>
+                        <p>SRM University AP</p>
+                    </div>
+                </div>
+                <div class="sponsor-card">
+                    <img src="https://srmap.edu.in/file/2019/12/White.png" alt="Sponsor 2" class="sponsor-logo">
+                    <div class="sponsor-content">
+                        <h3>Co-Sponsor</h3>
+                        <p>SRM AP Sports</p>
+                    </div>
+                </div>
+                <!-- Add more sponsor cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Winners Section -->
+    <section class="winners-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">HALL OF FAME</div>
+                <h2 class="section-heading">PAST <span class="accent-text">CHAMPIONS</span></h2>
+                <p class="section-subtitle">Celebrating excellence and achievement</p>
+            </div>
+            <div class="winners-slider">
+                <div class="winner-card">
+                    <div class="winner-image">
+                        <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=800&h=600"
+                            alt="Cricket Champions">
+                        <div class="winner-overlay"></div>
+                    </div>
+                    <div class="winner-content">
+                        <div class="winner-year">2023</div>
+                        <h3>Cricket Tournament</h3>
+                        <p>Team Thunderbolts</p>
+                        <div class="winner-college">VIT Vellore</div>
+                    </div>
+                </div>
+                <!-- Add more winner cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Venue Section -->
+    <section class="venue-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">LOCATION</div>
+                <h2 class="section-heading">WORLD-CLASS <span class="accent-text">FACILITIES</span></h2>
+                <p class="section-subtitle">State-of-the-art venues for peak performance</p>
+            </div>
+            <div class="venue-grid">
+                <div class="venue-card">
+                    <div class="venue-image">
+                        <img src="https://srmap.edu.in/wp-content/uploads/2017/03/1.jpg" alt="Main Stadium">
+                        <div class="venue-overlay"></div>
+                    </div>
+                    <div class="venue-content">
+                        <h3>Main Stadium</h3>
+                        <p>Capacity: 5000+</p>
+                        <ul class="venue-features">
+                            <li>FIFA Standard Football Ground</li>
+                            <li>400m Athletic Track</li>
+                            <li>Digital Scoreboard</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Add more venue cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">SCHEDULE</div>
+                <h2 class="section-heading">EVENT <span class="accent-text">TIMELINE</span></h2>
+                <p class="section-subtitle">Mark your calendar for these important dates</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Registration Opens</h3>
+                        <p>January 15, 2025</p>
+                        <a href="#register" class="timeline-button">Register Now</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Opening Ceremony</h3>
+                        <p>February 28, 2025</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Finals</h3>
+                        <p>March 3, 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">TESTIMONIALS</div>
+                <h2 class="section-heading">WHAT PEOPLE <span class="accent-text">SAY</span></h2>
+                <p class="section-subtitle">Hear from our past participants</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"An incredible experience that pushed our limits and created lasting memories. The
+                            organization was top-notch!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&fit=crop&w=100&h=100"
+                            alt="Author" class="author-image">
+                        <div class="author-info">
+                            <h4>John Doe</h4>
+                            <p>Cricket Team Captain, VIT</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more testimonial cards -->
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Common Section Styles */
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(135, 206, 235, 0.1);
+            border: 1px solid rgba(135, 206, 235, 0.3);
+            border-radius: 20px;
+            color: #87CEEB;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .section-heading {
+            font-size: 48px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .accent-text {
+            color: #87CEEB;
+        }
+
+        .section-subtitle {
+            color: #aaa;
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Sponsors Section */
+        .sponsors-section {
+            padding: 100px 0;
+            background: #0a0a0a;
+        }
+
+        .sponsors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .sponsor-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(135, 206, 235, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .sponsor-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(135, 206, 235, 0.3);
+            box-shadow: 0 20px 40px rgba(135, 206, 235, 0.1);
+        }
+
+        .sponsor-logo {
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+
+        /* Winners Section */
+        .winners-section {
+            padding: 100px 0;
+            background: #0a0a0a;
+        }
+
+        .winners-slider {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .winner-card {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .winner-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(135, 206, 235, 0.1);
+        }
+
+        .winner-image {
+            position: relative;
+            height: 200px;
+        }
+
+        .winner-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .winner-content {
+            padding: 20px;
+            color: #fff;
+        }
+
+        /* Venue Section */
+        .venue-section {
+            padding: 100px 0;
+            background: #0a0a0a;
+        }
+
+        .venue-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .venue-card {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .venue-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(135, 206, 235, 0.1);
+        }
+
+        .venue-image {
+            position: relative;
+            height: 200px;
+        }
+
+        .venue-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .venue-content {
+            padding: 20px;
+            color: #fff;
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            padding: 100px 0;
+            background: #0a0a0a;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: rgba(135, 206, 235, 0.3);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 60px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: #87CEEB;
+            border-radius: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-content {
+            width: 45%;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            color: #fff;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 100px 0;
+            background: #0a0a0a;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(135, 206, 235, 0.1);
+        }
+
+        .testimonial-content {
+            color: #fff;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .author-info {
+            color: #fff;
+        }
+
+        .author-info h4 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .author-info p {
+            margin: 5px 0 0;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-dot {
+                left: 30px;
+            }
+
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px !important;
+            }
+
+            .section-heading {
+                font-size: 36px;
+            }
+        }
+    </style>
 
     <!-- Gallery Section -->
     <div class="gallery-section">
@@ -453,16 +1355,20 @@
             <div class="menu-left">
                 <div class="menu-background-video">
                     <video autoplay muted loop playsinline>
-                        <source src="https://img.freepik.com/free-psd/holi-festival-social-media-post-template-design_505751-3381.jpg?t=st=1737658747~exp=1737662347~hmac=3e952b113af2dbbab39e9109cd4a13de9e86539c6e1368a2dcfb9ab9ef6b0217&w=1480" type="video/mp4">
+                        <source
+                            src="https://img.freepik.com/free-psd/holi-festival-social-media-post-template-design_505751-3381.jpg?t=st=1737658747~exp=1737662347~hmac=3e952b113af2dbbab39e9109cd4a13de9e86539c6e1368a2dcfb9ab9ef6b0217&w=1480"
+                            type="video/mp4">
                     </video>
                 </div>
                 <div class="menu-image-overlay">
-                                        <img src="https://img.freepik.com/free-psd/holi-festival-social-media-post-template-design_505751-3381.jpg?t=st=1737658747~exp=1737662347~hmac=3e952b113af2dbbab39e9109cd4a13de9e86539c6e1368a2dcfb9ab9ef6b0217&w=1480" alt="UDGAM Logo">
+                    <img src="https://img.freepik.com/free-psd/holi-festival-social-media-post-template-design_505751-3381.jpg?t=st=1737658747~exp=1737662347~hmac=3e952b113af2dbbab39e9109cd4a13de9e86539c6e1368a2dcfb9ab9ef6b0217&w=1480"
+                        alt="UDGAM Logo">
 
                 </div>
                 <div class="menu-left-content">
                     <div class="menu-logo">
-                        <img class="menu-image" src="https://testfiles-udgam-six.vercel.app/img/UDGAM%20(1).png" alt="UDGAM Logo">
+                        <img class="menu-image" src="https://testfiles-udgam-six.vercel.app/img/UDGAM%20(1).png"
+                            alt="UDGAM Logo">
                     </div>
                     <h2 class="menu-title">UDGAM <span class="year-text">2025</span></h2>
                     <p class="menu-subtitle">EMBRACE THE SPIRIT</p>
@@ -548,319 +1454,318 @@
     </div>
 
     <style>
-    .menu-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.98);
-        backdrop-filter: blur(20px);
-        z-index: 1000;
-        display: none;
-        opacity: 0;
-        transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
 
-    .menu-overlay.active {
-        display: block;
-        opacity: 1;
-    }
+        .menu-overlay.active {
+            display: block;
+            opacity: 1;
+        }
 
-    .menu-container {
-        display: flex;
-        height: 100%;
-    }
-
-    .menu-left {
-        width: 45%;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .menu-background-video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    .menu-background-video video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transform: scale(1.1);
-        transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .menu-overlay.active .menu-background-video video {
-        transform: scale(1);
-    }
-    .menu-image{
-        border: #87CEEB 2px solid;
-        box-shadow: 0 0 10px #87CEEB;
-
-    }
-
-    .menu-image-overlay {
-        position: absolute;
-        border: #87cfeb74 2px solid;
-        box-shadow: 0 0 10px #87cfeb;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-            135deg, 
-            rgba(0,0,0,0.9) 0%,
-            rgba(0,0,0,0.7) 50%,
-            rgba(0,0,0,0.4) 100%
-        );
-    }
-
-    .menu-left-content {
-        position: absolute;
-        bottom: 4rem;
-        left: 4rem;
-        color: white;
-        z-index: 1;
-    }
-
-    .menu-logo {
-        margin-bottom: 2rem;
-    }
-
-    .menu-logo img {
-        width: 150px;
-        height: auto;
-    }
-
-    .menu-title {
-        font-size: 4rem;
-        font-weight: 800;
-        margin: 0;
-        line-height: 1;
-        letter-spacing: -1px;
-    }
-
-    .year-text {
-        background: linear-gradient(45deg, #ff3366, #ff0000);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .menu-subtitle {
-        font-size: 1.2rem;
-        margin-top: 1rem;
-        opacity: 0.8;
-        letter-spacing: 2px;
-    }
-
-    .menu-right {
-        width: 55%;
-        padding: 6rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .menu-close-btn {
-        position: fixed;
-        top: 2rem;
-        right: 2rem;
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-    }
-
-    .close-btn-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        transition: transform 0.3s ease;
-    }
-
-    .menu-close-btn:hover .close-btn-inner {
-        transform: rotate(90deg);
-    }
-
-    .close-btn-inner span {
-        display: block;
-        width: 100%;
-        height: 2px;
-        background: white;
-        position: absolute;
-        top: 50%;
-        transform-origin: center;
-        transition: background-color 0.3s ease;
-    }
-
-    .menu-close-btn:hover span {
-        background: #ff3366;
-    }
-
-    .close-btn-inner span:first-child {
-        transform: rotate(45deg);
-    }
-
-    .close-btn-inner span:last-child {
-        transform: rotate(-45deg);
-    }
-
-    .menu-nav-list {
-        list-style: none;
-        padding: 0;
-    }
-
-    .menu-nav-item {
-        margin: 2rem 0;
-        transform: translateX(-30px);
-        opacity: 0;
-        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .menu-overlay.active .menu-nav-item {
-        transform: translateX(0);
-        opacity: 1;
-    }
-
-    .menu-nav-link {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        color: white;
-        text-decoration: none;
-        padding: 1rem 0;
-        position: relative;
-    }
-
-    .menu-nav-link::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 1px;
-        background: #ff3366;
-        transition: width 0.3s ease;
-    }
-
-    .menu-nav-link:hover::after {
-        width: 100%;
-    }
-
-    .menu-nav-text {
-        font-size: 3rem;
-        font-weight: 700;
-        transition: color 0.3s ease;
-    }
-
-    .menu-nav-desc {
-        font-size: 0.9rem;
-        opacity: 0.6;
-        margin-top: 0.5rem;
-    }
-
-    .menu-nav-number {
-        font-family: 'Courier New', monospace;
-        font-size: 1.2rem;
-        opacity: 0.4;
-        transition: opacity 0.3s ease;
-    }
-
-    .menu-nav-link:hover .menu-nav-text {
-        color: #ff3366;
-    }
-
-    .menu-nav-link:hover .menu-nav-number {
-        opacity: 1;
-    }
-
-    .menu-footer {
-        margin-top: 4rem;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 2rem;
-    }
-
-    .menu-social {
-        display: flex;
-        gap: 2rem;
-    }
-
-    .menu-social-link {
-        color: white;
-        text-decoration: none;
-        font-size: 1.5rem;
-        opacity: 0.7;
-        transition: all 0.3s ease;
-    }
-
-    .menu-social-link:hover {
-        opacity: 1;
-        color: #ff3366;
-        transform: translateY(-3px);
-    }
-
-    .menu-copyright {
-        color: rgba(255,255,255,0.4);
-        font-size: 0.9rem;
-    }
-
-    @media (max-width: 1024px) {
         .menu-container {
-            flex-direction: column;
+            display: flex;
+            height: 100%;
         }
-        
-        .menu-left {
-            width: 100%;
-            height: 35vh;
-        }
-        
-        .menu-right {
-            width: 100%;
-            padding: 3rem 2rem;
-        }
-        
-        .menu-left-content {
-            left: 2rem;
-            bottom: 2rem;
-        }
-        
-        .menu-title {
-            font-size: 3rem;
-        }
-        
-        .menu-nav-text {
-            font-size: 2.5rem;
-        }
-    }
 
-    @media (max-width: 768px) {
+        .menu-left {
+            width: 45%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu-background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .menu-background-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.1);
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .menu-overlay.active .menu-background-video video {
+            transform: scale(1);
+        }
+
+        .menu-image {
+            border: #87CEEB 2px solid;
+            box-shadow: 0 0 10px #87CEEB;
+
+        }
+
+        .menu-image-overlay {
+            position: absolute;
+            border: #87cfeb74 2px solid;
+            box-shadow: 0 0 10px #87cfeb;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg,
+                    rgba(0, 0, 0, 0.9) 0%,
+                    rgba(0, 0, 0, 0.7) 50%,
+                    rgba(0, 0, 0, 0.4) 100%);
+        }
+
+        .menu-left-content {
+            position: absolute;
+            bottom: 4rem;
+            left: 4rem;
+            color: white;
+            z-index: 1;
+        }
+
+        .menu-logo {
+            margin-bottom: 2rem;
+        }
+
+        .menu-logo img {
+            width: 150px;
+            height: auto;
+        }
+
         .menu-title {
-            font-size: 2.5rem;
+            font-size: 4rem;
+            font-weight: 800;
+            margin: 0;
+            line-height: 1;
+            letter-spacing: -1px;
         }
-        
+
+        .year-text {
+            background: linear-gradient(45deg, #ff3366, #ff0000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .menu-subtitle {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            opacity: 0.8;
+            letter-spacing: 2px;
+        }
+
+        .menu-right {
+            width: 55%;
+            padding: 6rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .menu-close-btn {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .close-btn-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-close-btn:hover .close-btn-inner {
+            transform: rotate(90deg);
+        }
+
+        .close-btn-inner span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: white;
+            position: absolute;
+            top: 50%;
+            transform-origin: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-close-btn:hover span {
+            background: #ff3366;
+        }
+
+        .close-btn-inner span:first-child {
+            transform: rotate(45deg);
+        }
+
+        .close-btn-inner span:last-child {
+            transform: rotate(-45deg);
+        }
+
+        .menu-nav-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu-nav-item {
+            margin: 2rem 0;
+            transform: translateX(-30px);
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .menu-overlay.active .menu-nav-item {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .menu-nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            text-decoration: none;
+            padding: 1rem 0;
+            position: relative;
+        }
+
+        .menu-nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #ff3366;
+            transition: width 0.3s ease;
+        }
+
+        .menu-nav-link:hover::after {
+            width: 100%;
+        }
+
         .menu-nav-text {
-            font-size: 2rem;
+            font-size: 3rem;
+            font-weight: 700;
+            transition: color 0.3s ease;
         }
-        
+
+        .menu-nav-desc {
+            font-size: 0.9rem;
+            opacity: 0.6;
+            margin-top: 0.5rem;
+        }
+
+        .menu-nav-number {
+            font-family: 'Courier New', monospace;
+            font-size: 1.2rem;
+            opacity: 0.4;
+            transition: opacity 0.3s ease;
+        }
+
+        .menu-nav-link:hover .menu-nav-text {
+            color: #ff3366;
+        }
+
+        .menu-nav-link:hover .menu-nav-number {
+            opacity: 1;
+        }
+
+        .menu-footer {
+            margin-top: 4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
         .menu-social {
-            gap: 1.5rem;
+            display: flex;
+            gap: 2rem;
         }
-    }
+
+        .menu-social-link {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .menu-social-link:hover {
+            opacity: 1;
+            color: #ff3366;
+            transform: translateY(-3px);
+        }
+
+        .menu-copyright {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 1024px) {
+            .menu-container {
+                flex-direction: column;
+            }
+
+            .menu-left {
+                width: 100%;
+                height: 35vh;
+            }
+
+            .menu-right {
+                width: 100%;
+                padding: 3rem 2rem;
+            }
+
+            .menu-left-content {
+                left: 2rem;
+                bottom: 2rem;
+            }
+
+            .menu-title {
+                font-size: 3rem;
+            }
+
+            .menu-nav-text {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-title {
+                font-size: 2.5rem;
+            }
+
+            .menu-nav-text {
+                font-size: 2rem;
+            }
+
+            .menu-social {
+                gap: 1.5rem;
+            }
+        }
     </style>
 
     <script>
-    document.querySelector('.menu-button').addEventListener('click', function() {
-        document.querySelector('.menu-overlay').classList.add('active');
-    });
+        document.querySelector('.menu-button').addEventListener('click', function () {
+            document.querySelector('.menu-overlay').classList.add('active');
+        });
 
-    document.querySelector('.menu-close-btn').addEventListener('click', function() {
-        document.querySelector('.menu-overlay').classList.remove('active');
-    });
+        document.querySelector('.menu-close-btn').addEventListener('click', function () {
+            document.querySelector('.menu-overlay').classList.remove('active');
+        });
     </script>
 
     <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=66db7f57ef9c0c7a7026f696"
@@ -868,7 +1773,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.prod.website-files.com/66db7f57ef9c0c7a7026f696/js/webflow.fd96635f9.js"
         type="text/javascript"></script>
- 
+
 
     <!-- Footer Section -->
     <footer class="footer-section">
@@ -937,5 +1842,36 @@
     </footer>
 
 </body>
+<script>
+    const slider = document.querySelector('.slider');
+
+    function activate(e) {
+        const items = document.querySelectorAll('.item');
+        e.target.matches('.next') && slider.append(items[0])
+        e.target.matches('.prev') && slider.prepend(items[items.length - 1]);
+    }
+
+    document.addEventListener('click', activate, false);
+</script>
+
+<script>
+function toggleMute() {
+    const video = document.querySelector('.main-background-image');
+    const button = document.querySelector('.main-background-holder button');
+    if (video.muted) {
+        video.muted = false;
+        button.innerHTML = '<i class="fas fa-volume-up"></i> Mute';
+    } else {
+        video.muted = true;
+        button.innerHTML = '<i class="fas fa-volume-mute"></i> Unmute';
+    }
+}
+</script>
+<script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=675aea0b3207dd793e9b0bce"
+type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+crossorigin="anonymous"></script>
+<script
+src="https://cdn.prod.website-files.com/675aea0b3207dd793e9b0bce/js/webflow.5b891b05bf938b9999a5fd3087425739.js"
+type="text/javascript"></script>
 
 </html>

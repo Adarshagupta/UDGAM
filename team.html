@@ -197,75 +197,320 @@
             }
         }
 
-        /* Navigation */
-        .nav-bar {
+        /* Updated Navbar Styles */
+        .navbar {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(0, 191, 255, 0.1);
+            height: 90px;
+            transition: all 0.4s ease;
+            width: 100vw;
+            opacity: 1;
+            visibility: visible;
         }
 
-        .nav-container {
+        .navbar.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .navbar-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 0 80px;
+            height: 100%;
+            width: 100%;
         }
 
         .nav-logo {
-            height: 40px;
-            width: auto;
+            width: 150px;
+            height: auto;
+            filter: drop-shadow(0 0 10px rgba(0, 191, 255, 0.3));
+            transition: all 0.4s ease;
         }
 
-        .nav-links {
+        .nav-logo:hover {
+            transform: scale(1.05) rotate(-2deg);
+            filter: drop-shadow(0 0 15px rgba(0, 191, 255, 0.5));
+        }
+
+        .menu-toggle {
+            cursor: pointer;
             display: flex;
-            gap: 2rem;
+            flex-direction: column;
+            gap: 8px;
+            padding: 15px;
+            background: rgba(0, 191, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.4s ease;
+            margin-left: auto;
         }
 
-        .nav-link {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: color 0.3s ease;
+        .menu-toggle:hover {
+            background: rgba(0, 191, 255, 0.2);
+            transform: scale(1.1);
         }
 
-        .nav-link:hover,
-        .nav-link.active {
+        .bar {
+            width: 25px;
+            height: 2px;
+            background: #00bfff;
+            border-radius: 2px;
+            transition: all 0.4s ease;
+            box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+        }
+
+        .menu-toggle:hover .bar {
+            background: #fff;
+            box-shadow: 0 0 15px rgba(0, 191, 255, 0.7);
+        }
+
+        .menu-toggle.active {
+            background: rgba(0, 191, 255, 0.2);
+            transform: rotate(180deg);
+        }
+
+        .menu-toggle.active .bar:nth-child(1) {
+            transform: translateY(10px) rotate(45deg);
+        }
+
+        .menu-toggle.active .bar:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-10px);
+        }
+
+        .menu-toggle.active .bar:nth-child(3) {
+            transform: translateY(-10px) rotate(-45deg);
+        }
+
+        /* Fullscreen Menu Styles */
+        .fullscreen-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(10, 10, 10, 0.98);
+            backdrop-filter: blur(30px);
+            z-index: 1001;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .fullscreen-menu.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .menu-content {
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 0.4fr 0.6fr;
+            margin: 0 auto;
+        }
+
+        .menu-image-section {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .menu-image {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+        }
+
+        .menu-image-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                90deg,
+                rgba(10, 10, 10, 0.7),
+                rgba(10, 10, 10, 0.98)
+            );
+            z-index: 1;
+        }
+
+        .menu-main-content {
+            padding: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .menu-logo {
+            width: 180px;
+            height: auto;
+            filter: drop-shadow(0 0 20px rgba(0, 191, 255, 0.3));
+        }
+
+        .menu-close {
+            font-size: 48px;
             color: #00bfff;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(0, 191, 255, 0.1);
+        }
+
+        .menu-close:hover {
+            background: rgba(0, 191, 255, 0.2);
+            transform: rotate(90deg) scale(1.1);
+            color: #fff;
+        }
+
+        .menu-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding: 0 50px;
+        }
+
+        .menu-link {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            text-decoration: none;
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.4s ease;
+        }
+
+        .menu-number {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 18px;
+            color: rgba(0, 191, 255, 0.5);
+            min-width: 40px;
+            transition: all 0.4s ease;
+        }
+
+        .menu-text {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .menu-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 54px;
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 2px;
+            transition: all 0.4s ease;
+            text-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+        }
+
+        .menu-desc {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.5);
+            transition: all 0.4s ease;
+        }
+
+        .menu-link:hover .menu-number {
+            color: #00bfff;
+            transform: translateX(10px) scale(1.2);
+        }
+
+        .menu-link:hover .menu-title {
+            color: #00bfff;
+            transform: translateX(20px);
+            text-shadow: 0 0 30px rgba(0, 191, 255, 0.5);
+        }
+
+        .menu-link:hover .menu-desc {
+            color: rgba(0, 191, 255, 0.7);
+            transform: translateX(20px);
+        }
+
+        .fullscreen-menu.active .menu-link {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .menu-footer {
+            margin-top: auto;
+            padding: 40px 50px;
+            border-top: 1px solid rgba(0, 191, 255, 0.1);
+        }
+
+        .menu-footer .social-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .menu-footer .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(0, 191, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00bfff;
+            font-size: 20px;
+            transition: all 0.4s ease;
+        }
+
+        .menu-footer .social-link:hover {
+            background: rgba(0, 191, 255, 0.2);
+            transform: translateY(-5px) scale(1.1);
+            color: #fff;
         }
 
         @media screen and (max-width: 991px) {
-            .hero-title {
-                font-size: 48px;
+            .navbar-container {
+                padding: 0 40px;
             }
 
-            .team-members {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            .menu-content {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-image-section {
+                display: none;
+            }
+
+            .menu-main-content {
+                padding: 40px;
             }
         }
 
         @media screen and (max-width: 767px) {
-            .hero-title {
-                font-size: 36px;
+            .navbar-container {
+                padding: 0 20px;
             }
 
-            .committee-title {
-                font-size: 28px;
+            .nav-logo {
+                width: 120px;
             }
 
-            .member-card {
-                padding: 20px;
-            }
-
-            .nav-links {
-                display: none;
+            .menu-main-content {
+                padding: 60px 20px;
             }
         }
 
@@ -349,7 +594,8 @@
             display: flex;
             flex-direction: column;
             height: auto;
-            max-height: 400px;
+            max-height: 500px;
+            max-width: 400px;
         }
 
         .member-card:hover {
@@ -489,7 +735,8 @@
 
         .executive-image-wrap {
             position: relative;
-            padding-top: 75%;
+            padding-top: 80%;
+            height: 200px;
             overflow: hidden;
         }
 
@@ -694,23 +941,80 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav-bar">
-        <div class="nav-container">
-            <a href="index.html" class="brand">
+    <!-- Updated Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="nav-logo-link">
                 <img src="https://testfiles-udgam-six.vercel.app/img/UDGAM%20(1).png" alt="UDGAM Logo" class="nav-logo">
             </a>
-            <div class="nav-links">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="events.html" class="nav-link">Events</a>
-                <a href="team.html" class="nav-link active">Team</a>
-                <a href="#contact" class="nav-link">Contact</a>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
-            <button class="menu-button">
-                <span class="menu-icon"></span>
-            </button>
         </div>
     </nav>
+
+    <!-- Updated Fullscreen Menu -->
+    <div class="fullscreen-menu">
+        <div class="menu-content">
+            <div class="menu-image-section">
+                <img src="https://raw.githubusercontent.com/Adarshagupta/testfiles_udgam/refs/heads/main/UD_06.gif" alt="Menu Background" class="menu-image">
+                <div class="menu-image-overlay"></div>
+            </div>
+            <div class="menu-main-content">
+                <div class="menu-header">
+                    <img src="https://testfiles-udgam-six.vercel.app/img/UDGAM%20(1).png" alt="UDGAM Logo" class="menu-logo">
+                    <div class="menu-close">×</div>
+                </div>
+                <nav class="menu-nav">
+                    <a href="/" class="menu-link">
+                        <span class="menu-number">01</span>
+                        <span class="menu-text">
+                            <span class="menu-title">HOME</span>
+                            <span class="menu-desc">Back to main page</span>
+                        </span>
+                    </a>
+                    <a href="#about" class="menu-link">
+                        <span class="menu-number">02</span>
+                        <span class="menu-text">
+                            <span class="menu-title">ABOUT</span>
+                            <span class="menu-desc">Our story & mission</span>
+                        </span>
+                    </a>
+                    <a href="events.html" class="menu-link">
+                        <span class="menu-number">03</span>
+                        <span class="menu-text">
+                            <span class="menu-title">EVENTS</span>
+                            <span class="menu-desc">Competitions & activities</span>
+                        </span>
+                    </a>
+                    <a href="team.html" class="menu-link">
+                        <span class="menu-number">04</span>
+                        <span class="menu-text">
+                            <span class="menu-title">TEAM</span>
+                            <span class="menu-desc">Meet the organizers</span>
+                        </span>
+                    </a>
+                    <a href="#contact" class="menu-link">
+                        <span class="menu-number">05</span>
+                        <span class="menu-text">
+                            <span class="menu-title">CONTACT</span>
+                            <span class="menu-desc">Get in touch</span>
+                        </span>
+                    </a>
+                </nav>
+                <div class="menu-footer">
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/srmuap.udgam/" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -757,6 +1061,97 @@
                     <div class="executive-content">
                         <h3 class="executive-name">Tharun</h3>
                         <div class="executive-position">Events Executive</div>
+                        <div class="executive-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                                <!-- Executive Card 2 -->
+                                <div class="executive-card">
+                                    <div class="executive-image-wrap">
+                                        <img src="https://ui-avatars.com/api/?name=Jane+Smith&background=ff0000&color=fff&size=200" alt="Executive 2" class="executive-image">
+                                    </div>
+                                    <div class="executive-content">
+                                        <h3 class="executive-name">Jane Smith</h3>
+                                        <div class="executive-position">Managing Director</div>
+                                        <div class="executive-social">
+                                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                                <!-- Executive Card 2 -->
+                <div class="executive-card">
+                    <div class="executive-image-wrap">
+                        <img src="https://ui-avatars.com/api/?name=Jane+Smith&background=ff0000&color=fff&size=200" alt="Executive 2" class="executive-image">
+                    </div>
+                    <div class="executive-content">
+                        <h3 class="executive-name">Jane Smith</h3>
+                        <div class="executive-position">Managing Director</div>
+                        <div class="executive-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                                <!-- Executive Card 2 -->
+                                <div class="executive-card">
+                                    <div class="executive-image-wrap">
+                                        <img src="https://ui-avatars.com/api/?name=Jane+Smith&background=ff0000&color=fff&size=200" alt="Executive 2" class="executive-image">
+                                    </div>
+                                    <div class="executive-content">
+                                        <h3 class="executive-name">Jane Smith</h3>
+                                        <div class="executive-position">Managing Director</div>
+                                        <div class="executive-social">
+                                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                                <!-- Executive Card 2 -->
+                <div class="executive-card">
+                    <div class="executive-image-wrap">
+                        <img src="https://ui-avatars.com/api/?name=Jane+Smith&background=ff0000&color=fff&size=200" alt="Executive 2" class="executive-image">
+                    </div>
+                    <div class="executive-content">
+                        <h3 class="executive-name">Jane Smith</h3>
+                        <div class="executive-position">Managing Director</div>
+                        <div class="executive-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                                <!-- Executive Card 2 -->
+                                <div class="executive-card">
+                                    <div class="executive-image-wrap">
+                                        <img src="https://ui-avatars.com/api/?name=Jane+Smith&background=ff0000&color=fff&size=200" alt="Executive 2" class="executive-image">
+                                    </div>
+                                    <div class="executive-content">
+                                        <h3 class="executive-name">Jane Smith</h3>
+                                        <div class="executive-position">Managing Director</div>
+                                        <div class="executive-social">
+                                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                                <!-- Executive Card 2 -->
+                <div class="executive-card">
+                    <div class="executive-image-wrap">
+                        <img src="https://ui-avatars.com/api/?name=Jane+Smith&background=ff0000&color=fff&size=200" alt="Executive 2" class="executive-image">
+                    </div>
+                    <div class="executive-content">
+                        <h3 class="executive-name">Jane Smith</h3>
+                        <div class="executive-position">Managing Director</div>
                         <div class="executive-social">
                             <a href="#"><i class="fab fa-linkedin"></i></a>
                             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -1616,6 +2011,55 @@
             updateScroll();
         });
     });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const menuClose = document.querySelector('.menu-close');
+            const fullscreenMenu = document.querySelector('.fullscreen-menu');
+            const menuLinks = document.querySelectorAll('.menu-link');
+            const navbar = document.querySelector('.navbar');
+
+            // Toggle menu
+            menuToggle.addEventListener('click', () => {
+                fullscreenMenu.classList.add('active');
+                menuToggle.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                navbar.classList.add('hidden');
+
+                // Animate menu links
+                menuLinks.forEach((link, index) => {
+                    link.style.animationDelay = `${0.1 * (index + 1)}s`;
+                });
+            });
+
+            // Close menu
+            menuClose.addEventListener('click', () => {
+                fullscreenMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+                document.body.style.overflow = '';
+                navbar.classList.remove('hidden');
+            });
+
+            // Close menu when clicking a link
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    fullscreenMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                    document.body.style.overflow = '';
+                    navbar.classList.remove('hidden');
+                });
+            });
+
+            // Navbar scroll effect
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        });
     </script>
 </body>
 </html> 
