@@ -17,7 +17,6 @@ Get a sneak peek into Udgam 2025:
 
 
 ---
->>>>>>> 6adb078eb7e143f391c8fb51d244583094779135
 ## 🚀 About the Project
 
 Udgam 2025 is an annual sports fest that brings together athletes and sports enthusiasts from across the region. The event features a wide variety of sports, engaging competitions, and a platform for participants to showcase their talents.
