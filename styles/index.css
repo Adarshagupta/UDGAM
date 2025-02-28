@@ -3481,4 +3481,38 @@ margin: 0 auto;
       transform: scale(0.9);
     }
   }
-  
+  .sponsor-section {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+    text-align: center;
+}
+.sponsor-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.sponsor-logos {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 0;
+}
+.sponsor-logo {
+    max-width: 150px;
+    margin: 0 15px;
+    transition: transform 0.3s;
+}
+.sponsor-logo:hover {
+    transform: scale(1.1);
+}
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+.sponsor-logo {
+    max-width: 150px;
+    margin: 0 15px;
+    transition: transform 0.3s;
+}
+.sponsor-logo:hover {
+    transform: scale(1.1);
+}

@@ -738,10 +738,7 @@ body {
                                     <span class="price">₹2,000</span>
                                     <span class="per-team">per team</span>
                                 </div>
-                                <a href="cricket.html" class="register-button">
-                                    Register Now
-                                    <i class="fas fa-arrow-right button-icon"></i>
-                                </a>
+                                <a href="#" class="register-button" disabled>Registration Closed</a>
                             </div>
                         </div>
                         <div class="sport-image-wrapper">
@@ -790,10 +787,7 @@ body {
                                     <span class="price">₹50</span>
                                     <span class="per-team">per person</span>
                                 </div>
-                                <a href="#" class="register-button">
-                                    Register Now
-                                    <i class="fas fa-arrow-right button-icon"></i>
-                                </a>
+                                <a href="#" class="register-button" disabled>Registration Closed</a>
                             </div>
                         </div>
                         <div class="sport-image-wrapper">
@@ -837,10 +831,7 @@ body {
                                     <span class="price">Free</span>
                                     <span class="per-team">registration</span>
                                 </div>
-                                <a href="#" class="register-button">
-                                    Register Now
-                                    <i class="fas fa-arrow-right button-icon"></i>
-                                </a>
+                                <a href="#" class="register-button" disabled>Registration Closed</a>
                             </div>
                         </div>
                         <div class="sport-image-wrapper">
@@ -884,10 +875,7 @@ body {
                                     <span class="price">Free</span>
                                     <span class="per-team">registration</span>
                                 </div>
-                                <a href="#" class="register-button">
-                                    Register Now
-                                    <i class="fas fa-arrow-right button-icon"></i>
-                                </a>
+                                <a href="#" class="register-button" disabled>Registration Closed</a>
                             </div>
                         </div>
                         <div class="sport-image-wrapper">
@@ -936,7 +924,7 @@ body {
                                     <span class="price">Free</span>
                                     <span class="per-team">registration</span>
                                 </div>
-                                <a href="cricket.html" class="register-button">Register Team</a>
+                                <a href="#" class="register-button" disabled>Registration Closed</a>
                             </div>
                         </div>
                         <div class="sport-image-container">
@@ -982,7 +970,7 @@ body {
                                     <span class="price">Free</span>
                                     <span class="per-team">registration</span>
                                 </div>
-                                <a href="cricket.html" class="register-button">Register Team</a>
+                                <a href="#" class="register-button" disabled>Registration Closed</a>
                             </div>
                         </div>
                         <div class="sport-image-container">
@@ -1159,7 +1147,7 @@ body {
                                 <span class="per-team">per person</span>
                             </div>
                             <a href="#" class="register-button">
-                                Register Now
+                                /
                                 <i class="fas fa-arrow-right button-icon"></i>
                             </a>
                         </div>
@@ -1206,7 +1194,7 @@ body {
                                 <span class="per-team">per player</span>
                             </div>
                             <a href="#" class="register-button">
-                                Register Now
+                                /
                                 <i class="fas fa-arrow-right button-icon"></i>
                             </a>
                         </div>
@@ -1252,7 +1240,7 @@ body {
                                     <span class="per-team">per person</span>
                                 </div>
                                 <a href="#" class="register-button">
-                                    Register Now
+                                    /
                                     <i class="fas fa-arrow-right button-icon"></i>
                                 </a>
                             </div>
@@ -1406,7 +1394,7 @@ body {
                         <a href="#About">About</a>
                         <a href="events.html">Events</a>
                         <a href="/#Gallery">Gallery</a>
-                        <a href="https://payment.collexo.com/pay-fee/srm-ap-events">Register</a>
+                        <a href="/">Register</a>
                     </div>
                     <div class="footer-links-column">
                         <h4>Contact Us</h4>
