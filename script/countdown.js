@@ -24,6 +24,6 @@ const countdown = setInterval(function () {
     // If the countdown is finished, display a message
     if (distance < 0) {
         clearInterval(countdown);
-        document.getElementById('countdown').innerHTML = "UDGAM HAS BEGUN!";
+        document.getElementById('countdown').innerHTML = "UDGAM 2025 HAS ENDED!";
     }
 }, 1000); 
